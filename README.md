@@ -18,6 +18,23 @@
 
 #### 预计开发时间:一个月(因为只有周末有时间)
 
+#### 目录结构
+├── backend                 后端
+|   ├── views.py
+|   └── models.py
+├── frontend                前端
+|   ├── src
+|   |   ├── assets
+|   |   ├── components
+|   |   ├── router
+|   |   ├── App.vue
+|   |   └── main.js
+|   ├── config
+|   └── package.json
+├── musicPlayer
+|   ├── footer.html
+|   └── header.html
+└── README.md
 #### url&api
 - 歌曲
     - https://music.163.com/#/song?id=408532862
