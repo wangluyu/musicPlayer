@@ -16,10 +16,10 @@ def add_user(request):
         user = User(username=request.GET.get('username'))
         user.save()
         response['msg'] = 'success'
-        response['error_num'] = 0
+        response['status'] = 200
     except Exception as e:
         response['msg'] = str(e)
-        response['error_num'] = 1
+        response['status'] = 0
     return JsonResponse(response)
 
 @require_http_methods(["GET"])
@@ -29,8 +29,8 @@ def show_user(request):
         user = User.objects.filter()
         response['list']  =json.loads(serializers.serialize("json",user))
         response['msg'] = 'success'
-        response['error_num'] = 0
+        response['status'] = 200
     except Exception as e:
         response['msg'] = 'error'
-        response['error_num'] = 1
+        response['status'] = 0
     return JsonResponse(response)
